@@ -15,7 +15,7 @@ dotenv.config({});
 connectDB();
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 // default middleware
 app.use(express.json());
@@ -37,5 +37,12 @@ app.use("/api/v1/progress", courseProgressRoute);
 app.listen(PORT, () => {
     console.log(`Server listen at port ${PORT}`);
 })
+
+
+
+
+// to resolve networking problem
+// netstat -ano | findstr :8080
+// taskkill /PID 6384 /F
 
 

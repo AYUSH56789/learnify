@@ -47,11 +47,21 @@ const Navbar = () => {
       {/* Desktop */}
       <div className="max-w-7xl mx-auto hidden md:flex justify-between items-center gap-10 h-full">
         <div className="flex items-center gap-2">
-          <School size={"30"} />
+          {/* <School size={"30"} /> */}
           <Link to="/">
-            <h1 className="hidden md:block font-extrabold text-2xl">
+            {/* <h1 className="hidden md:block font-extrabold text-2xl">
               E-Learning
-            </h1>
+            </h1> */}
+            <div className='logo' >
+  <a href='/'>
+    <img 
+      src="/logo.png" 
+      alt="flamingo" 
+      style={{ width: '115px' }} 
+    />
+  </a>
+</div>
+
           </Link>
         </div>
         {/* User icons and dark mode icon  */}
@@ -103,7 +113,16 @@ const Navbar = () => {
       </div>
       {/* Mobile device  */}
       <div className="flex md:hidden items-center justify-between px-4 h-full">
-        <h1 className="font-extrabold text-2xl">E-learning</h1>
+        {/* <h1 className="font-extrabold text-2xl">Learnify</h1> */}
+        <div className='logo' >
+  <a href='/'>
+    <img 
+      src="/logo.png" 
+      alt="flamingo" 
+      style={{ width: '115px' }} 
+    />
+  </a>
+</div>
         <MobileNavbar user={user}/>
       </div>
     </div>
@@ -128,7 +147,7 @@ const MobileNavbar = ({user}) => {
       </SheetTrigger>
       <SheetContent className="flex flex-col">
         <SheetHeader className="flex flex-row items-center justify-between mt-2">
-          <SheetTitle> <Link to="/">E-Learning</Link></SheetTitle>
+          <SheetTitle> <Link to="/">Learnify</Link></SheetTitle>
           <DarkMode />
         </SheetHeader>
         <Separator className="mr-2" />
